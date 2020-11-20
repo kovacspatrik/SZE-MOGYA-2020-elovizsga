@@ -41,6 +41,6 @@ solve;
 	printf "Kasszak: %d", putCashier[r];
 	printf "\n";
 }*/
-printf "%f",BuildingLength;
+printf "%f",maxRowLength;
 
 end;
