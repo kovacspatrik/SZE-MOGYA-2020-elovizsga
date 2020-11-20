@@ -26,7 +26,7 @@ s.t. RowsWithCashiersAreLonger{r in Rows}:
 s.t. MaxRowLength{r in Rows}:
 	maxRowLength >= rowLength[r];
 
-minimize BuildingLength: maxRowLength;
+minimize maxRowLength;
 
 solve;
 
