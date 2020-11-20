@@ -7,6 +7,7 @@ param cashierLength;
 set ProductGroups;
 param space{ProductGroups};
 
+var BuildingLength;
 
 #Variables
 var put {ProductGroups, Rows} binary;
@@ -26,7 +27,7 @@ s.t. RowsWithCashiersAreLonger{r in Rows}:
 s.t. MaxRowLength{r in Rows}:
 	maxRowLength >= rowLength[r];
 
-minimize maxRowLength;
+minimize BuildingLength: maxRowLength;
 
 solve;
 
@@ -41,6 +42,6 @@ solve;
 	printf "Kasszak: %d", putCashier[r];
 	printf "\n";
 }*/
-printf "%f",maxRowLength;
+printf "%f",BuildingLength;
 
 end;
